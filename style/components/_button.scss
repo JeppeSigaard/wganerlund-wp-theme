@@ -1,0 +1,47 @@
+.button, body a.button{
+	display: inline-block;
+	padding: 10px 20px;
+	line-height:1;
+	text-decoration: none;
+	cursor: pointer;
+	background-color: $jeppe-color-green;
+	color: $jeppe-light;
+	transition: background-color 120ms;
+	border-radius:3px;
+
+	&:hover{
+		color:$jeppe-light;
+		text-decoration: none;
+		background-color: darken($jeppe-color-green,5);
+	}
+
+	&.disabled,
+	&.disbaled:hover{
+		background-color: $jeppe-light-3;
+		cursor: default;
+	}
+
+	&.red{
+		background-color: $jeppe-color-red;
+
+		&:hover{
+			background-color: darken($jeppe-color-red,5);
+		}
+	}
+
+	&.blue{
+		background-color: $jeppe-color-blue;
+
+		&:hover{
+			background-color: darken($jeppe-color-blue,5);
+		}
+	}
+
+	&.black{
+		background-color: $jeppe-black;
+
+		&:hover{
+			background-color: darken($jeppe-black,5);
+		}
+	}
+}

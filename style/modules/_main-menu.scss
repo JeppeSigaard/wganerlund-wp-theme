@@ -1,0 +1,44 @@
+.main-menu{
+	margin: -$base-margin;
+
+	li.no-nav a,
+	li.no-nav a:hover{
+		cursor: default;
+		background-color: rgba(255,255,255,.9)!important;
+		color: $jeppe-black;
+		font-weight:normal;
+		font-family: 'Dimitri';
+		font-size: 110%;
+		padding-top:3px;
+	}
+
+	li a{
+		height: 45px;
+		line-height: 45px;
+		display: block;
+		padding: 0 $base-margin;
+		font-size: 80%;
+		text-transform: uppercase;
+		font-weight: 600;
+		transition: color 120ms, background-color 120ms;
+		color: $jeppe-light;
+
+		&:hover{
+			color: $anchor-hover-color;
+			background-color: rgba(255,255,255,.9)!important;
+		}
+
+	}
+
+	@for $i from 0 through 20{
+		$amount : .03 * $i;
+		li:nth-of-type(#{$i}) a{
+			background-color: rgba(255,255,255,$amount);
+		}
+	}
+
+	.sub-menu a{
+		font-weight: 400;
+		padding: 0 $base-margin 0 $base-margin*2;
+	}
+}

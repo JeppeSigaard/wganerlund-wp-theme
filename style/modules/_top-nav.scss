@@ -1,0 +1,35 @@
+$top-nav-height:45px;
+
+.site-top-nav{
+	font-size:0;
+	position:relative;
+	z-index:101;
+
+	background:$jeppe-black;
+
+	li{
+		display: inline-block;
+	}
+
+	a{
+		display: block;
+		height:$top-nav-height;
+		font-weight:600;
+		line-height: $top-nav-height;
+		padding:0 $base-margin/2 ;
+		color:$jeppe-light;
+		@media only screen and(min-width:480px){
+			padding:0 $base-margin;
+		}
+		font-size:11px;
+		text-decoration: none;
+		background:transparent;
+		transition: background 120ms, color 120ms;
+
+		&:hover{
+			background:$jeppe-light;
+			color:$anchor-hover-color;
+		}
+	}
+
+}

@@ -1,5 +1,5 @@
-# jeppe-wp-theme
-Custom WordPress tema til http://jeppe.io
+# wagnerlund-wp-theme
+Custom WordPress tema til http://wagnerlund.dk
 
 -----
 

@@ -6,27 +6,10 @@ $suggest = new WP_Query(array(
 ?>
 <section class="error-404">
     <article class="error-404-article read-width">
-        <h1 class="dimitri">Well, Shucks...</h1>
-        <p>Jeg har ikke noget til dig her. Kunne du tænke dig at lave noget? Skriv til mig, og så snakker vi om det:</p>
-        <form>
-            <div class="split">
-                <div>
-                    <input type="text" name="name">
-                    <label for="name">Dit navn</label>
-                </div>
-                <div>
-                    <input type="email" name="email">
-                    <label for="email">Din email</label>
-                </div>
-            </div>
-            <div>
-                <textarea name="besked" rows="1"></textarea>
-                <label for="besked">Hvad vil du bruge denne plads til?</label>
-            </div>
-            <div class="buttons right">
-                <a href="#" class="button submit black">Indsend anmodning</a>
-            </div>
-        </form>
+        <h1>Well, Shucks...</h1>
+        <p>Jeg har ikke noget til dig her.</p>
+        <p><a href="<?php bloginfo('url') ?>">Klik her</a> for at vende tilbage til forsiden</p>
+
     </article>
 </section>
 <section class="feature">

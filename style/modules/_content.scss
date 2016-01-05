@@ -4,7 +4,7 @@
 .site-content{
 	position: relative;
 	min-height:calc(100vh - #{$header-height} - #{$top-nav-height} );
-	background:$jeppe-white;
+	background:$jeppe-light;
 	transition:margin-right 120ms;
 
 	@media only screen and(min-width:960px){
@@ -15,16 +15,13 @@
  		margin-right:25%;
  	}
 
-	@media only screen and(min-width:1280px){
- 		border:$base-margin solid darken($jeppe-light-3,2);
- 	}
-
     pre{
         margin:0 0 $text-margin;
     }
 }
 
 .menu-out .site-content,
-.zen-mode .site-content{
+.zen-mode .site-content,
+.home .site-content{
 	margin-right:0;
 }

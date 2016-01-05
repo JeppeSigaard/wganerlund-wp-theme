@@ -1,6 +1,6 @@
 .page-header{
 	@extend .post-header;
-
+    
 	height:auto;
 	padding:40px $base-margin;
 
@@ -13,8 +13,6 @@
 		text-align: center;
 
 		h1{
-			color:$jeppe-light;
-			font-family: 'Dimitri';
 			font-size:200%;
 
 		   @media only screen and(min-width:768px){

@@ -21,8 +21,10 @@ transition:right 0ms;
 
  	@media only screen and(min-width:960px){
  		right:0;
+        overflow:visible;
 		box-shadow:none;
         width:$site-nav-width;
+        background: $jeppe-light;
  	}
 
 	@media only screen and(min-width:1280px){
@@ -50,7 +52,7 @@ transition:right 0ms;
 
 @media only screen and(min-width:960px){
 
-	.zen-mode .site-nav{
+	.zen-mode .site-nav, .home .site-nav{
         width:0;
  		right:-$site-nav-width;
  	}

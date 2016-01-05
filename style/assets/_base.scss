@@ -1,7 +1,7 @@
 html,body{
 
     font-family:$base-font;
-    background:$jeppe-black;
+    background:$contrast-color-blue-1;
     color:$jeppe-black;
     font-weight: $base-font-weight;
     @extend %font-size;
@@ -79,6 +79,12 @@ article{
     }
     
 }
+
+.max-1000{    
+    max-width:1000px;
+    margin: auto;
+}
+
 
 .read-width-small{
     max-width:480px;

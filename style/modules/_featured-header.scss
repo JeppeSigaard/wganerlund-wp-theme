@@ -1,0 +1,28 @@
+.featured-header{
+    padding: $base-margin/2;
+    
+    h3{
+        background:$contrast-color-blue-1;
+        position: relative;
+        display: inline-block;
+        font-size:125%;
+        width: calc(100% - 65px);
+        color: white;
+        height: 50px;
+        line-height: 50px;
+        padding:0px $base-margin;
+        text-transform: uppercase;
+        font-weight:900;
+        span{
+            font-weight:300;
+        }
+    }
+    
+    .square-icon{
+        float:right;
+        background: $contrast-color-blue-3;
+        color: white;
+        fill: white;
+    }
+    
+}

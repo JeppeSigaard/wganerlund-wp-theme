@@ -13,4 +13,4 @@ require 'functions/kirki.php';
 require 'functions/post-types.php';
 
 // AJAX
-require 'functions/ajax/newsletter.php';
+require 'functions/ajax/ajax-contact-form.php';

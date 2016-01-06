@@ -18,4 +18,3 @@
 	<?php get_template_part('template-parts/common/post','footer'); ?>
 </article>
 <?php endwhile; ?>
-<?php get_template_part('template-parts/common/comments'); ?>

@@ -1,3 +1,16 @@
+.featured-posts{
+    padding: 30px 0px 40px;
+    
+    >.inner{
+        padding: 0;
+        @media only screen and(min-width:480px){
+            
+            padding:10px;
+        }
+        
+    }
+}
+
 .featured-header{
     padding: $base-margin/2;
     
@@ -12,6 +25,8 @@
         line-height: 50px;
         padding:0px $base-margin;
         text-transform: uppercase;
+        white-space: nowrap;
+        overflow: hidden;
         font-weight:900;
         span{
             font-weight:300;

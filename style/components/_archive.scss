@@ -8,12 +8,7 @@
 
 }
 
-.archive-article {
-	@extend .featured-article;
-}
-
 .archive-header{
-	@extend .post-lead;
 	@extend section;
 	margin:0-$base-margin/2 0-$base-margin/2 0;
 

@@ -9,3 +9,19 @@
         border:none;
     }
 }
+
+.site-footer-info{
+    float: left;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.site-footer-nav{
+    float: right;
+    vertical-align: top;
+    display: inline-block;
+    text-transform: uppercase;
+    line-height: 1.5;
+    font-size: 80%;
+    text-align: right
+}

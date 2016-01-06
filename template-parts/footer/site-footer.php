@@ -1,5 +1,5 @@
 <footer id='site-footer' class="site-footer">
-    <section class="inner">
+    <section class="inner max-1000">
         <article class="site-footer-info">
             <h3 class="footer-comp-name"><?php echo get_theme_mod('info_name'); ?></h3>
             <p><?php echo get_theme_mod('info_address'); ?><br />

@@ -1,0 +1,90 @@
+.home .main-article{
+    padding-bottom: 40px;
+}
+
+.home .main-article,
+.front-box .inner{
+    background-color: white;
+    box-shadow: $base-shadow;
+    margin-bottom: $base-margin;
+}
+
+$box-icon-size: 80px;
+
+.front-boxes >.inner{
+    padding:0;
+    font-size: 0;
+    
+    
+    @media only screen and(min-width:768px){    
+        margin:-$base-margin/2;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.front-box{
+    @extend %font-size;
+    @extend %article-font-style;
+    margin-top: $box-icon-size/2+30 ;
+    
+    @media only screen and(min-width:768px){
+        flex-grow: 1;
+        width:calc(100% / 3);
+        vertical-align: top;
+        padding: 0 $base-margin/2 $base-margin/2 $base-margin/2;
+        position: relative;
+        
+        .inner{
+            box-shadow: none;
+            background: none;
+        }
+        
+        &:before{
+            content:'';
+            z-index:-1;
+            background-color: white;
+            box-shadow: $base-shadow;
+            position:absolute;
+            top:0px;
+            left:10px;
+            right:10px;
+            bottom:10px;
+        }
+        
+    }
+    
+    .box-icon{
+        position:relative;
+        width:$box-icon-size;
+        height:$box-icon-size;
+        margin:auto;
+        top:-$box-icon-size/2-20px;
+        border-radius: $box-icon-size;
+        background: $contrast-color-blue-1;
+        box-shadow: $base-shadow;
+        
+        svg{
+            width:40px;
+            height:40px;
+            margin: $box-icon-size/2 - 20;
+            fill: white;
+        }
+        
+    }
+    
+    &:nth-of-type(2) .box-icon{
+            background: $contrast-color-blue-2;
+        }
+        &:nth-of-type(3) .box-icon{
+            background: $contrast-color-blue-3;
+        }
+    
+    .box-header{
+        font-size:125%;
+        font-weight: 700;
+        margin-top: -$box-icon-size+40;
+        margin-bottom: $base-margin;
+        text-transform: uppercase;
+    }
+}

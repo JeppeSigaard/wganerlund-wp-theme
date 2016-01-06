@@ -1,4 +1,4 @@
-$site-nav-width:280px;
+
 
 .no-anim .site-nav{
 transition:right 0ms;
@@ -6,7 +6,7 @@ transition:right 0ms;
 
 .site-nav{
 	position:absolute;
-	background:$jeppe-black;
+	background: $jeppe-light;
 	width:0;
 	height:calc(100vh + #{$top-nav-height});
 	right:-$site-nav-width;

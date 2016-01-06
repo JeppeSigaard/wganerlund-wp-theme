@@ -67,7 +67,7 @@ var formJsInit = function(){
         checkSuccess($(this));
     });
 
-    autosize($('form textarea:not(.no-autosize)'));
+    autosize($('form textarea:not(.no-autosize):visible'));
 
     // Check for allerede udfyldt felter ved sideload
     $('form input, form textarea').each(function(){
@@ -120,6 +120,17 @@ var formJsInit = function(){
         click : function(e){
             var t = $(e.target);
 
+            if(t.is('.front-form-expand')){
+                e.preventDefault();
+                t.hide();
+                $(this).addClass('active').animate({opacity: 1},200);
+                $('.front-form').find('.hidden').removeClass('hidden');
+                $('html,body').animate({scrollTop: $('.front-form').offset().top - $('.site-header').height()});
+                autosize($('form textarea:not(.no-autosize):visible'));
+                
+               
+            }
+            
             if(t.is('.submit')){
                 e.preventDefault();
 

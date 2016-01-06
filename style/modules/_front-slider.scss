@@ -1,6 +1,14 @@
 .front-slider{
+    overflow: hidden;
+}
+
+.front-slider,
+.flickity-viewport,
+.flickity-slider{
     padding:0;
     height:240px;
+    width:100%;
+    outline: none;
     
     @media only screen and(min-width:480px){
         padding:0 0 50%;
@@ -24,16 +32,35 @@
     
     .inner, .slide{
         z-index:-1;
-        @extend %fill-all;
+        position:absolute;
+        top: 0;
+        height:100%;
+        width:100%;
         background-size:cover;
         background-color:$jeppe-black-3;
     }
     
     .slide{
         box-shadow: 0px -5px 10px rgba(0,0,0,.2) inset;
+        outline: none;
         
     }
 }
+
+.is-selected .slider-cta > *{
+        top:0;
+    }
+
+ .slider-cta > *{
+        top: 100px;
+        @for $i from 2 through 4{
+            $amount : 200 * $i;
+            &:nth-child(#{$i}){
+                transition:top #{$amount}ms;
+            }
+        }
+    }
+
 
 .slider-cta{
     position: absolute;
@@ -47,6 +74,8 @@
     height:50px;
     line-height:50px;
     font-size: 0;
+    
+    
     
     span,
     a{
@@ -62,6 +91,7 @@
     .cta-icon,
     .prev,
     .next{
+        position:relative;
         width:55px;
         height:50px;
         color: $contrast-color-blue-1;
@@ -82,7 +112,7 @@
     .prev,
     .next{
         margin-left: 10px;
-        transition: background-color 120ms, fill 120ms;
+        transition: background-color 120ms, fill 120ms, top 600ms;
         
         &:hover{
             background-color:$contrast-color-blue-3;
@@ -99,6 +129,7 @@
     .next{
         background-color:$contrast-color-blue-1;
         fill: white;
+        transition: background-color 120ms, fill 120ms, top 700ms;
     }
 }
 

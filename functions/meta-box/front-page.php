@@ -30,13 +30,8 @@ $mb[] = array(
                 array(
                     'name' => __('Ikon','rwmb'),
                     'id' => 'field_icon',
-                    'type' => 'select',
-                    'options' => array(
-                        'phone' => 'Telefon',
-                        'truck' => 'Lastbil',
-                        'video' => 'Video',
-                        'clock' => 'Ur',
-                    ),
+                    'type' => 'file_advanced',
+                    'max_file_uploads' => 1,
                 ),
 
                 array(

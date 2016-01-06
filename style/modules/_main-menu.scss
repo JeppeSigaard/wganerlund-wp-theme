@@ -1,32 +1,152 @@
-.main-menu{
-	margin: -$base-margin;
+/// Menu < 960px
+@media only screen and(max-width:960px){
+    .menu-out .main-menu{
+        right: 0;
+        transition: right 120ms;
+    }
+    
+    .main-menu{
+        position: absolute;
+        right: -$site-nav-width;
+        top: 60px;
+        width: $site-nav-width;
+        color: $jeppe-black;
+        text-transform: uppercase;
+        font-size: 80%;
+        
+        a{
+            display: block;
+            padding: $base-margin;
+            background-color: transparent;
+            transition: color 120ms, background-color 120ms;
+            
+            &:hover{
+                background-color: white;
+                color: $anchor-hover-color;
+            }
+        }
+        
+        .sub-menu a{
+            font-size: 90%;
+            padding-left: 30px;
+        }
+    }
 
-	li a{
-		height: 45px;
-		line-height: 45px;
-		display: inline-block;
-		padding: 0 $base-margin;
-		font-size: 80%;
-		text-transform: uppercase;
-		font-weight: 600;
-		transition: color 120ms, background-color 120ms;
-		color: $jeppe-black;
+}
 
-		&:hover{
-			color: $anchor-hover-color;
-		}
+/// Menu @ > 960px 
+@media only screen and(min-width:960px){
 
-	}
+    .main-menu{
 
-	@for $i from 0 through 20{
-		$amount : .03 * $i;
-		li:nth-of-type(#{$i}) a{
-			background-color: rgba(255,255,255,$amount);
-		}
-	}
+        float:right;
+        height: 60px;
+        line-height: 58px;
+        padding:0px $base-margin/2;
+        text-transform: uppercase;
+        font-size:80%;
 
-	.sub-menu a{
-		font-weight: 400;
-		padding: 0 $base-margin 0 $base-margin*2;
-	}
+        li{
+            display: inline-block;
+
+            &:after{
+                content: '';
+                display: block;
+                position:relative;
+                width:0px;
+                transition: width 240ms;
+                margin:auto;
+                height:1px;
+                top: -15px;
+                background-color: $anchor-hover-color;
+            }
+
+            &:hover:after{
+                width:calc( 100% - #{$base-margin});
+            }
+
+            &.menu-item-has-children:before{
+                content: '';
+                position:relative;
+                float: right;
+                display: block;
+                top:31px;
+                margin-left:5px;
+                width: 0; 
+                height: 0; 
+                border-right: 3px solid transparent;
+                border-left: 3px solid transparent;
+                border-top: 3px solid;
+                border-top-color: $jeppe-black;
+                transition: border-top-color 120ms;
+
+            }
+
+            &:hover{
+                color: $anchor-hover-color;
+
+                &.menu-item-has-children:before{
+                    border-top-color: $anchor-hover-color;
+                }
+
+                .sub-menu{
+                    display: block;
+                    position:absolute;
+                    min-width: 240px;
+                    white-space: nowrap;
+                    top: 60px;
+                    margin-left: -10px;
+                    background: $contrast-color-blue-1;
+                    color: white;
+                    padding: 0;
+                    box-shadow: $base-shadow;
+
+                    li{
+                        display: block;
+
+                        &:after{
+                            display: none;
+                        }
+                    }
+
+                    a{
+                        padding: 0 $base-margin;
+                        height:45px;
+                        line-height: 45px;
+                    }
+
+                   @for $i from 0 through 20{
+                        $amount : .05 * $i;
+                        li:nth-of-type(#{$i}) a{
+                            background-color: rgba(255,255,255,$amount);
+                            transition:background-color 120ms;
+
+                            &:hover{
+                                background-color:white;
+                            }
+
+                        }
+                    }
+
+
+
+                }
+
+            }
+
+        }
+
+        a{
+            display: block;
+            padding:0  $base-margin/2;
+            transition: color 120ms;
+
+
+
+        }
+
+        .sub-menu{
+            display: none;
+        }
+    }
 }

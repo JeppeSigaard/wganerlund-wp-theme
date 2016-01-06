@@ -8,6 +8,7 @@
 	color: $jeppe-light;
 	transition: background-color 120ms;
 	border-radius:3px;
+    text-transform: uppercase;
 
 	&:hover{
 		color:$jeppe-light;
@@ -30,10 +31,10 @@
 	}
 
 	&.blue{
-		background-color: $jeppe-color-blue;
+		background-color: $contrast-color-blue-2;
 
 		&:hover{
-			background-color: darken($jeppe-color-blue,5);
+			background-color: lighten($contrast-color-blue-2,5);
 		}
 	}
 

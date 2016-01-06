@@ -5,6 +5,9 @@
             <?php wp_nonce_field('wp-form-submit','submit-form'); ?>
             <a class="front-form-expand" href="#">Skal vi kontakte dig?</a>
             <div class="hidden">
+                <p>Udfyld formularen herunder. Så kontakter vi dig om serviceaftale, tilbud, sugning af vejbrønde, TV inspektion, skaktrens eller andet: </p>
+            </div>
+            <div class="hidden">
                 <input type="text" name="navn">
                 <label for="navn">Dit navn</label>
             </div>
@@ -19,6 +22,9 @@
             <div class="hidden">
                 <textarea rows="4" name="kommentar"></textarea>
                 <label for="kommentar">Tilføj kommentar</label>
+            </div>
+            <div class="hidden right">
+                <a class="button blue submit">Send</a>
             </div>
         </form>
     </div>

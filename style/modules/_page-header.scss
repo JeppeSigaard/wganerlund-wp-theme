@@ -1,30 +1,8 @@
 .page-header{
-	@extend .post-header;
+
+    text-transform: uppercase;
+    font-weight: 700;
+    padding:$base-margin 0;
+    font-size: 200%
     
-	height:auto;
-	padding:40px $base-margin;
-
-	&:before,
-	&:after{
-		display: none;
-	}
-
-	.page-title{
-		text-align: center;
-
-		h1{
-			font-size:200%;
-
-		   @media only screen and(min-width:768px){
-
-			   font-size:250%;
-		   }
-
-			 @media only screen and(min-width:1280px){
-
-			   font-size:300%;
-		   }
-
-		}
-	}
 }

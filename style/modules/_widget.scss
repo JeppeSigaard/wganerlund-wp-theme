@@ -1,0 +1,35 @@
+.widget{
+	padding: $base-margin $base-margin $base-margin 0 ;
+	color: $jeppe-black-3;
+
+	>div:not(.widget-header){
+
+		background-color: white;
+		//box-shadow: $base-shadow;
+		padding: $base-margin;
+
+	}
+
+}
+
+.widget-header h3{
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+	width: calc( 100% - 65px);
+	margin-bottom: $base-margin/2;
+	background: white;
+	text-transform: uppercase;
+	padding: 0 $base-margin/2;
+	//box-shadow: $base-shadow;
+}
+
+.widget-header .square-icon{
+	//box-shadow: $base-shadow;
+	background-color: $contrast-color-blue-3;
+	float: right;
+
+	svg{
+		fill: white;
+	}
+}

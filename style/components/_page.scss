@@ -1,0 +1,67 @@
+.home .page-header{
+	padding: $base-margin 0;
+}
+
+.page-image{
+	padding: 0 0 56.25%;
+	background-size: cover;
+	background-position:center;
+
+	@media only screen and(min-width:768px){
+ 		padding: 0 0 45%;
+		border:solid $jeppe-light;
+		border-width: 0px $base-margin $base-margin;
+	}
+
+	background-size: cover;
+}
+
+.page-header{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 200%;
+    padding: $base-margin/2;
+
+	@media only screen and(min-width:480px){
+		padding: $base-margin;
+	}
+
+	@media only screen and(min-width:768px){
+		padding: 50px $base-margin $base-margin;
+	}
+
+}
+
+.page-title{
+	@extend .read-width;
+	margin: auto;
+
+	.subheader{
+		font-size: 80%;
+		font-weight: 300;
+		color: #999;
+		margin:-.75rem 0 0;
+	}
+}
+
+body:not(.home) .site-content{
+
+	padding:0;
+
+	@media only screen and(min-width:768px){
+		padding:$base-margin 0 50px;
+	}
+
+	article{
+		background:white;
+		box-shadow: $base-shadow;
+
+		@media only screen and(min-width:768px){
+			margin:0 $base-margin;
+		}
+	}
+}
+
+.page-content{
+	padding-top: 0;
+}

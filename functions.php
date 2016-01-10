@@ -11,6 +11,7 @@ require 'functions/meta-box.php';
 require 'functions/header-image.php';
 require 'functions/kirki.php';
 require 'functions/post-types.php';
+require 'functions/widget.php';
 
 // AJAX
 require 'functions/ajax/ajax-contact-form.php';

@@ -1,20 +1,21 @@
-<?php while (have_posts()) : the_post(); ?>
+<?php while (have_posts()) : the_post(); if (has_post_thumbnail()) : ?>
+<?php $image_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'widescreen' ); ?>
+<div class="page-image" style="background-image: url(<?php echo $image_url ?>);" ></div>
+<?php endif; ?>
 <article <?php post_class(); ?>>
-	<?php $image_url = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()),'widescreen'); ?>
-	<header class="post-header" data-bg="<?php echo $image_url[0] ?>">
-		<?php the_title('<div class="post-title"><h1>','</h1></div>'); ?>
-		<?php get_template_part('template-parts/common/post','meta'); ?>
-	</header>
-	<section class="post-lead">
-		<div class="inner read-width">
-			<?php the_excerpt(); ?>
+	<header class="page-header">
+		<div class="page-title">
+			<?php the_title('<h1>','</h1>'); ?>
+			<?php if(get_post_meta(get_the_ID(),'subheader',true)) : ?>
+				<h2 class="subheader"> <?php echo get_post_meta(get_the_ID(),'subheader',true) ?></h2>
+			<?php endif; ?>
 		</div>
-	</section>
-	<section class="post-content">
+	</header>
+	<section class="page-content">
 		<div class="inner read-width">
 			<?php the_content(); ?>
 		</div>
 	</section>
-	<?php get_template_part('template-parts/common/post','footer'); ?>
 </article>
 <?php endwhile; ?>
+<?php get_template_part('template-parts/common/page','after'); ?>

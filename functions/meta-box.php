@@ -8,6 +8,7 @@ function smamo_add_boxes(){
     require_once 'meta-box/front-page.php';
     require_once 'meta-box/slide.php';
     require_once 'meta-box/form.php';
+    require_once 'meta-box/subheader.php';
     
     
     

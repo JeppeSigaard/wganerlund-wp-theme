@@ -12,6 +12,7 @@ require 'functions/header-image.php';
 require 'functions/kirki.php';
 require 'functions/post-types.php';
 require 'functions/widget.php';
+require 'functions/gallery.php';
 
 // AJAX
 require 'functions/ajax/ajax-contact-form.php';

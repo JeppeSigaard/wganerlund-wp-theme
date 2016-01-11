@@ -1,6 +1,7 @@
 // @koala-append 'assets/js.cookie.js';
 // @koala-append 'assets/waitUntilExists.js';
 // @koala-append 'assets/flickity.js';
+// @koala-append 'assets/jquery.fancybox.js';
 
 
 
@@ -14,3 +15,4 @@
 // @koala-append 'modules/sync-scroll.js';
 // @koala-append 'modules/data-img.js';
 // @koala-append 'modules/front-slider.js';
+// @koala-append 'modules/gallery-fancybox.js';

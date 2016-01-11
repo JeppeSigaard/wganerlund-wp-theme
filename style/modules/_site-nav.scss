@@ -1,4 +1,12 @@
+.fixed .site-nav.bottom{
+   
+    position:absolute;
+    top:auto;
+    bottom:0;
+    height:auto;
+    min-height:100vh;
 
+}
 
 .no-anim .site-nav{
 transition:right 0ms;
@@ -12,7 +20,7 @@ transition:right 0ms;
 	right:-$site-nav-width;
 	top:0;
 	z-index:10;
-	padding: $header-height+$top-nav-height 0;
+	padding: 0;
 	transition:right 120ms;
 	box-shadow:$base-shadow;
 	overflow:hidden;
@@ -33,6 +41,7 @@ transition:right 0ms;
 
 	.inner{
 		padding:0 0 100px;
+        position: relative;
 	}
 
 	.site-nav-part{
@@ -40,14 +49,19 @@ transition:right 0ms;
 	}
 }
 
-.menu-out .site-nav{
-	right:0;
-    width:$site-nav-width;
+@media only screen and(max-width:768px){
+    .menu-out .site-nav{
+    	right:0;
+        width:$site-nav-width;
+    }
 }
+
 
 .fixed .site-nav{
 		position:fixed;
 		padding:$header-height 0;
+        height:100%;
+        overflow:hidden;
 	}
 
 @media only screen and(min-width:960px){

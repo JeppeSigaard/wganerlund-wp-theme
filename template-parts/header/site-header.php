@@ -2,7 +2,7 @@
 	<div class="inner">
 		<a href="<?php bloginfo('url'); ?>" class="site-header-logo">
             <span>Wagnerlund</span>
-            <span>Kloakservice</span>
+            <span>Kloakservice A/S</span>
         </a>
         <?php get_template_part('template-parts/side/main','menu'); ?>
         <a class="hamburger" href="#" nofollow tabindex="0">

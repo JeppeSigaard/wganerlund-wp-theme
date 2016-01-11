@@ -36,6 +36,7 @@
         font-size: 0;
         
         .list-item-date{
+            font-family: $contrast-font;
             background-color: white;
             text-align: center;
             padding-top: 5px;
@@ -78,17 +79,16 @@
             margin-bottom: $base-margin/2;
         }
         
-        height: 200px;
         border-bottom: 30px solid white;
         
         @media only screen and(min-width:640px){
             
-            height:210px;
+            height:200px;
         }
         
         @media only screen and(min-width:768px){
             
-            height:235px;
+            height:225;
         }
         
 	}

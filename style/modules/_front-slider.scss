@@ -1,5 +1,6 @@
 .front-slider{
     overflow: hidden;
+    font-family: $contrast-font;
 }
 
 .front-slider,
@@ -63,6 +64,15 @@
 
 
 .slider-cta{
+    @media only screen and(max-width:640px){
+    
+        .cta-text{
+            
+            display: none;
+        }
+    }
+    
+    font-weight: 700;
     position: absolute;
     bottom:$base-margin/2;
     left:$base-margin/2;

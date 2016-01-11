@@ -1,5 +1,11 @@
 .site-footer{
     @extend .site-content;
+    
+    h3{
+        
+        font-family: $contrast-font;
+        text-transform: uppercase;
+    }
 
 	width: 100%;
 
@@ -24,6 +30,7 @@
 }
 
 .site-footer-nav{
+    font-family: $contrast-font;
     float: right;
     vertical-align: top;
     display: inline-block;

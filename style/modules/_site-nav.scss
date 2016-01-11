@@ -22,7 +22,7 @@ transition:right 0ms;
 	z-index:10;
 	padding: 0;
 	transition:right 120ms;
-	box-shadow:$base-shadow;
+	box-shadow:-1px -1px 5px rgba(0,0,0,.2);
 	overflow:hidden;
     transform: translate3d(0,0,0);
     backface-visibility: hidden;
@@ -38,7 +38,7 @@ transition:right 0ms;
         overflow:visible;
 		box-shadow:none;
         width:$site-nav-width;
-        background: $jeppe-light;
+        background: white;
  	}
 
 	@media only screen and(min-width:1280px){

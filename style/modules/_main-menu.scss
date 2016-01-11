@@ -7,6 +7,7 @@
     
     .main-menu{
         position: absolute;
+        overflow: hidden;
         right: -$site-nav-width;
         top: 60px;
         width: $site-nav-width;

@@ -36,4 +36,25 @@
 		}
 	}
 
+    li.telefon a{
+        
+        padding-left: 0;
+        
+        &:before{
+            position:relative;
+            display: inline-block;
+            vertical-align: top;
+            height: $top-nav-height;
+            width: $top-nav-height + 5;
+            content: '';
+            background-image: url(../statics/icons/phone-fill-white.svg);
+            background-size: 30px;
+            background-position:center;
+            background-repeat: no-repeat;
+        }
+        
+        &:hover:before{
+            background-image: url(../statics/icons/phone-fill-blue.svg);
+        }
+    }
 }

@@ -27,6 +27,12 @@ transition:right 0ms;
     transform: translate3d(0,0,0);
     backface-visibility: hidden;
 
+    &.has-before:before{
+        position:relative;
+        content:'';
+    }
+    
+    
  	@media only screen and(min-width:960px){
  		right:0;
         overflow:visible;
@@ -49,7 +55,7 @@ transition:right 0ms;
 	}
 }
 
-@media only screen and(max-width:768px){
+@media only screen and(max-width:960px){
     .menu-out .site-nav{
     	right:0;
         width:$site-nav-width;

@@ -35,16 +35,29 @@ $mb[] = array(
                 ),
 
                 array(
-                    'name' => __('overskrift','rwmb'),
+                    'name' => __('Overskrift','rwmb'),
                     'id' => 'field_heading',
                     'type' => 'text',
                 ),                
 
                 array(
-                    'name' => 'tekst',
+                    'name' => 'Tekst',
                     'id'    => 'field_text',
                     'type' => 'textarea',
                     'rows' => 4,
+                ),
+                
+                array(
+                    'name'  => 'Link',
+                    'id'  => 'field_link',
+                    'type'  => 'post',
+                    'field_type' => 'select_advanced',
+                    'post_type'   => array( 'post', 'page' ),
+                    'placeholder' => __( 'Vælg et indhold', 'smamo' ),
+                    'query_args'  => array(
+                        'post_status'    => 'publish',
+                        'posts_per_page' => - 1,
+                    ),
                 ),
 
             ),

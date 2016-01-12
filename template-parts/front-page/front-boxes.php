@@ -6,7 +6,11 @@ if($boxes && is_array($boxes)) : ?>
         <?php foreach($boxes as $box): ?>
         <div class="front-box">
             <div class="inner">
+            <?php if($box['field_link']) : ?>
+            <a href="<?php echo get_the_permalink($box['field_link']); ?>" class="box-icon"><?php include get_attached_file($box['field_icon']); ?></a>
+            <?php else :  ?>
             <div class="box-icon"><?php include get_attached_file($box['field_icon']); ?></div>
+            <?php endif; ?>
             <h3 class="box-header"><?php echo wp_strip_all_tags($box['field_heading']); ?></h3>
             <p><?php echo wp_strip_all_tags($box['field_text']); ?></p>
             </div>   

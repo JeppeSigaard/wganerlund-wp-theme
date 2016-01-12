@@ -19,11 +19,18 @@ transition:right 0ms;
 	height:calc(100vh + #{$top-nav-height});
 	right:-$site-nav-width;
 	top:0;
-	z-index:10;
+    
 	padding: 0;
 	transition:right 120ms;
 	box-shadow:-1px -1px 5px rgba(0,0,0,.2);
-	overflow:hidden;
+	overflow:scroll;
+    z-index:1000000;
+    
+    @media only screen and(min-width:960px){
+        overflow: hidden;
+        z-index:10;
+    }
+    
     transform: translate3d(0,0,0);
     backface-visibility: hidden;
 

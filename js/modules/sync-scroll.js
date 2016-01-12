@@ -5,6 +5,8 @@ $(function(){if($('.site-nav').length){
     
     $(window).on('scroll', function () {
 
+        if($(window).width > 960){
+        
         if($('.site-footer').offset().top < $(window).scrollTop() + $(window).height()){
             fancyScroll.addClass('bottom');
         }
@@ -35,14 +37,18 @@ $(function(){if($('.site-nav').length){
 		}
 
 		lastScrollTop = st;
+            
+        }
     });
+        
+        
     
     $(window).load(function(){
         
         if($('.site-content').innerHeight() < $('.site-nav').innerHeight()){
         
             $('.site-content').css({
-                height: $('.site-nav').innerHeight(),
+                minHeight: $('.site-nav').innerHeight(),
             });
 
         }

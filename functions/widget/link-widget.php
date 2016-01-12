@@ -21,10 +21,11 @@ class smamo_link_widget extends WP_Widget {
         
         $widget_text = ! empty( $instance['text'] ) ? $instance['text'] : '';
         $text = apply_filters( 'widget_text', $widget_text, $instance, $this );
+        $blank = ! empty( $instance['blank'] ) ? true : false;
         
         ?>
         <div class="widget">
-            <a href="<?php echo esc_url($instance['anchor']); ?>" class="widget-header">
+            <a <?php if($blank) { echo 'target="_blank"';} ?> href="<?php echo esc_url($instance['anchor']); ?>" class="widget-header">
                 <h3><?php echo _e($instance['title']); ?></h3>
                 <div class="widget-arrow square-icon icon-next"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20 20">
             <path d="M9.163 4.516c0.418 0.408 4.502 4.695 4.502 4.695 0.223 0.219 0.335 0.504 0.335 0.789s-0.112 0.57-0.335 0.787c0 0-4.084 4.289-4.502 4.695-0.418 0.408-1.17 0.436-1.615 0-0.446-0.434-0.481-1.041 0-1.574l3.747-3.908-3.747-3.908c-0.481-0.533-0.446-1.141 0-1.576s1.197-0.409 1.615 0z"></path>
@@ -45,6 +46,7 @@ class smamo_link_widget extends WP_Widget {
         $title = (isset($instance['title'])) ? $instance['title']: '';
         $anchor = (isset($instance['anchor'])) ? $instance['anchor']: '';
         $text = (isset($instance['text'])) ? $instance['text']: '';
+        $blank = (isset($instance['blank'])) ? $instance['blank']: '';
         
         
         ?>
@@ -60,6 +62,9 @@ class smamo_link_widget extends WP_Widget {
         
         <p><label for="<?php echo $this->get_field_id( 'text' ); ?>"><?php _e( 'Content:' ); ?></label>
 		<textarea class="widefat" rows="16" cols="20" id="<?php echo $this->get_field_id('text'); ?>" name="<?php echo $this->get_field_name('text'); ?>"><?php echo esc_textarea($text ); ?></textarea></p>
+        <p>
+           <input class="checkbox" type="checkbox"<?php checked( $blank ); ?> id="<?php echo $this->get_field_id('blank'); ?>" name="<?php echo $this->get_field_name('blank'); ?>" /> <label for="<?php echo $this->get_field_id('blank'); ?>"><?php _e('Åben i ny fane'); ?></label>
+        </p>
         <?php 
     }
 
@@ -71,6 +76,7 @@ class smamo_link_widget extends WP_Widget {
         $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
         $instance['anchor'] = ( ! empty( $new_instance['anchor'] ) ) ? esc_url( $new_instance['anchor'] ) : '';
         $instance['text'] = ( ! empty( $new_instance['text'] ) ) ? $new_instance['text']: '';
+        $instance['blank'] = $new_instance['blank'] ? 1 : 0;
 
         return $instance;
 

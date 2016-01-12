@@ -1,6 +1,6 @@
 <?php while (have_posts()) : the_post(); if (has_post_thumbnail()) : ?>
-<?php $image_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'widescreen' ); ?>
-<div class="page-image" style="background-image: url(<?php echo $image_url ?>);" ></div>
+<?php $image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'widescreen' ); ?>
+<div class="page-image" style="background-image: url(<?php echo $image_url[0] ?>);" ></div>
 <?php endif; ?>
 <article <?php post_class(); ?>>
 	<header class="page-header">

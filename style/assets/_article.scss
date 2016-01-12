@@ -94,6 +94,7 @@ body article{
     a:hover{
         text-decoration: underline;
         transition:color 120ms;
+        color: $anchor-hover-color;
     }
 
     a:hover{

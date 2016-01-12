@@ -16,6 +16,12 @@ $mb[] = array(
             ),
         
         array(
+            'name'  => __( 'Firma', 'rwmb' ),
+            'id'    => "form_firma",
+            'type' => 'text',
+            ),
+        
+        array(
             'name'  => __( 'Email', 'rwmb' ),
             'id'    => "form_email",
             'type' => 'text',

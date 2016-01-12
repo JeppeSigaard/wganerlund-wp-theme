@@ -12,6 +12,10 @@
                 <label for="navn">Dit navn</label>
             </div>
             <div class="hidden">
+                <input type="text" name="firma">
+                <label for="firma">Evt. firma</label>
+            </div>
+            <div class="hidden">
                 <input type="email" name="email">
                 <label for="email">Din email</label>
             </div>

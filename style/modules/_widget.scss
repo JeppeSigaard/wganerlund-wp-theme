@@ -20,7 +20,7 @@
 
 	}
     
-    a{
+    a:not(.widget-header){
         color: $contrast-color-blue-2;
         text-decoration: underline;
     }

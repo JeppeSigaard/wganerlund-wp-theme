@@ -16,3 +16,4 @@
 // @koala-append 'modules/data-img.js';
 // @koala-append 'modules/front-slider.js';
 // @koala-append 'modules/gallery-fancybox.js';
+// @koala-append 'modules/unhide-news.js';

@@ -16,6 +16,7 @@ function ajax_contact_form(){
     $response = array();
     $navn = (isset($_POST['navn'])) ? wp_strip_all_tags($_POST['navn']): false;
     $email = (isset($_POST['email'])) ? wp_strip_all_tags($_POST['email']): false;
+    $firma = (isset($_POST['firma'])) ? wp_strip_all_tags($_POST['firma']): false;
     $telefon = (isset($_POST['telefon'])) ? wp_strip_all_tags($_POST['telefon']): false;
     $about = (isset($_POST['about'])) ? wp_strip_all_tags($_POST['about']): false;
     $kommentar = (isset($_POST['kommentar'])) ? esc_textarea($_POST['kommentar']): false;
@@ -40,6 +41,7 @@ function ajax_contact_form(){
         
         update_post_meta($response['post_id'],'form_navn',$navn);
         update_post_meta($response['post_id'],'form_email',$email);
+        update_post_meta($response['post_id'],'form_firma',$firma);
         update_post_meta($response['post_id'],'form_telefon',$telefon);
         update_post_meta($response['post_id'],'form_about',$about);
         update_post_meta($response['post_id'],'form_kommentar',$kommentar);

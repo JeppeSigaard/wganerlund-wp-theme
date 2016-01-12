@@ -49,4 +49,5 @@ function unregister_default_widgets() {
  }
  add_action('widgets_init', 'unregister_default_widgets', 11);
 
-require 'widget/image-widget.php';
+// require 'widget/image-widget.php';
+require 'widget/link-widget.php';

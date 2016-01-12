@@ -1,3 +1,32 @@
 .posts-archive{
 	padding: 0 $base-margin!important;
 }
+
+
+.news-more{
+    @extend %font-size;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    text-align: center;
+    background: #999;
+    margin: 10px 10px 0px;
+    color: white!important;
+    text-transform: uppercase;
+    font-family: $contrast-font;
+    transition: background 120ms;
+    
+    &:hover{
+        background: $contrast-color-blue-2;
+    }
+
+}
+
+.news-hidden{
+    display: none;
+    
+    &.unhide{
+        display: inline;
+    }
+}

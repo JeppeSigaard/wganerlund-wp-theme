@@ -22,10 +22,16 @@ if($news->have_posts()): ?>
         </header>
         <ul class="archive-list item-list">
             <?php
-            while ($news->have_posts()) : $news->the_post();
-                get_template_part('template-parts/common/list','item');
-            endwhile; wp_reset_postdata();
+            $i = 0; while ($news->have_posts()) : $news->the_post(); $i++;
+                if ($i == 3) : ?>
+                <a class="news-more" href="#">Se tidligere nyheder</a>
+                <div class="news-hidden">
+                <?php endif;  get_template_part('template-parts/common/list','item'); 
+            endwhile; wp_reset_postdata(); 
             ?>
+            <?php if ($i >= 3) : ?>
+            </div>
+            <?php endif; ?>
         </ul>
 </section>
 <?php endif;

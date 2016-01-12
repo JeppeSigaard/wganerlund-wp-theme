@@ -33,3 +33,4 @@
         ?>
     </section>
 </footer>
+<a href="#" class="scroll-to-top">Til top <?php include get_template_directory() . '/statics/icons/chevron-left.svg' ?></a>

@@ -28,7 +28,15 @@
         white-space: nowrap;
         overflow: hidden;
         font-weight:900;
-        span{
+        
+        @media only screen and(max-width:640px){
+        
+            span{
+                display: none;
+            }
+        }
+        
+        span:nth-child(2){
             font-weight:300;
         }
     }

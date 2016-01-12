@@ -18,7 +18,7 @@ $news = new WP_Query(array(
 if($news->have_posts()): ?>
 <section class="posts-archive">
         <header class="archive-header">
-            <h3>Seneste nyt fra <span>Wagnerlund Kloakservice</span></h3>
+            <h3>Seneste nyt <span>fra</span> <span>Wagnerlund Kloakservice</span></h3>
         </header>
         <ul class="archive-list item-list">
             <?php

@@ -14,7 +14,7 @@
     </div>
     <div>
         <input type="email" name="email">
-        <label for="email">Din email</label>
+        <label for="email">Din e-mail</label>
     </div>
     <div>
         <input type="text" name="telefon">

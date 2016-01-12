@@ -17,7 +17,7 @@
             </div>
             <div class="hidden">
                 <input type="email" name="email">
-                <label for="email">Din email</label>
+                <label for="email">Din e-mail</label>
             </div>
             <div class="hidden">
                 <input type="text" name="telefon">

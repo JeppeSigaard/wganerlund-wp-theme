@@ -27,6 +27,12 @@ $mb[] = array(
             'type' => 'text',
             ),
         
+         array(
+            'name'  => __( 'Henvendelsen drejer sig om', 'rwmb' ),
+            'id'    => "form_about",
+            'type' => 'text',
+            ),
+        
         array(
             'name'  => __( 'Kommentar', 'rwmb' ),
             'id'    => "form_kommentar",

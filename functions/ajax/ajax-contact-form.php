@@ -17,6 +17,7 @@ function ajax_contact_form(){
     $navn = (isset($_POST['navn'])) ? wp_strip_all_tags($_POST['navn']): false;
     $email = (isset($_POST['email'])) ? wp_strip_all_tags($_POST['email']): false;
     $telefon = (isset($_POST['telefon'])) ? wp_strip_all_tags($_POST['telefon']): false;
+    $about = (isset($_POST['about'])) ? wp_strip_all_tags($_POST['about']): false;
     $kommentar = (isset($_POST['kommentar'])) ? esc_textarea($_POST['kommentar']): false;
     
     if(!$navn){$response['error'] = 'Indtast et navn';}
@@ -40,6 +41,7 @@ function ajax_contact_form(){
         update_post_meta($response['post_id'],'form_navn',$navn);
         update_post_meta($response['post_id'],'form_email',$email);
         update_post_meta($response['post_id'],'form_telefon',$telefon);
+        update_post_meta($response['post_id'],'form_about',$about);
         update_post_meta($response['post_id'],'form_kommentar',$kommentar);
         
         $response['success'] = '<article><h2>Tak for din henvendelse</h2><p>Vi vil besvare den hurtigst muligt.</p><article>';

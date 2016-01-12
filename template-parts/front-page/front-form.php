@@ -20,6 +20,17 @@
                 <label for="telefon">Dit telefonnummer</label>
             </div>
             <div class="hidden">
+            <select name="about">
+                <option rel="hide"></option>
+                <option>Serviceaftale</option>
+                <option>Tilbud </option>
+                <option>Fedtudskiller</option>
+                <option>Sug af vejbrønde</option>
+                <option>TV-inspektion</option>   
+            </select>
+            <label>Din henvendelse drejer sig om</label>
+        </div>
+            <div class="hidden">
                 <textarea rows="4" name="kommentar"></textarea>
                 <label for="kommentar">Tilføj kommentar</label>
             </div>
